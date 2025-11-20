@@ -38,6 +38,9 @@ const config = {
             'src',
             'node_modules',
         ],
+        alias: {
+            manifest: path.resolve(__dirname, '..', 'plugin.json'),
+        },
         extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
     },
     module: {
