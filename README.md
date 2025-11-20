@@ -1,10 +1,10 @@
-# Mattermost Fake Reply Plugin
+# Mattermost Link Reply Plugin
 
-A Mattermost plugin that adds a "Fake Reply" button to the post dropdown menu. When clicked, it inserts a message link and @mention into the text box without auto-sending, allowing users to edit the message before sending.
+A Mattermost plugin that adds a "Link Reply" button to the post dropdown menu. When clicked, it inserts a message link and @mention into the text box without auto-sending, allowing users to edit the message before sending.
 
 ## Features
 
-- Adds a "Fake Reply" button to the post dropdown menu (the "..." menu on each post)
+- Adds a "Link Reply" button to the post dropdown menu (the "..." menu on each post)
 - Inserts `@username [message link]` into the message text box
 - Appends to existing draft if present
 - Does not auto-send - waits for user to edit and send manually
@@ -18,13 +18,13 @@ A Mattermost plugin that adds a "Fake Reply" button to the post dropdown menu. W
 ## Installation
 
 1. Download the latest release from the releases page or build from source
-2. Upload `com.mattermost.plugin-fake-reply.tar.gz` to your Mattermost server via **System Console > Plugins > Plugin Management**
+2. Upload `com.mattermost.plugin-link-reply.tar.gz` to your Mattermost server via **System Console > Plugins > Plugin Management**
 3. Enable the plugin
 
 ## Usage
 
 1. Hover over any message and click the "..." menu
-2. Select "Fake Reply" from the dropdown
+2. Select "Link Reply" from the dropdown
 3. The message box will be populated with `@username [link to message] `
 4. Edit the message as needed and send
 
@@ -38,8 +38,8 @@ A Mattermost plugin that adds a "Fake Reply" button to the post dropdown menu. W
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/mattermost-plugin-fake-reply
-cd mattermost-plugin-fake-reply
+git clone https://github.com/yourusername/mattermost-plugin-link-reply
+cd mattermost-plugin-link-reply
 ```
 
 2. Install dependencies and build:
@@ -52,10 +52,10 @@ npm run build
 3. Package the plugin:
 ```bash
 cd ..
-tar -czf com.mattermost.plugin-fake-reply.tar.gz plugin.json webapp/dist/main.js
+tar -czf com.mattermost.plugin-link-reply.tar.gz plugin.json webapp/dist/main.js
 ```
 
-This will produce `com.mattermost.plugin-fake-reply.tar.gz` ready for upload to your Mattermost server.
+This will produce `com.mattermost.plugin-link-reply.tar.gz` ready for upload to your Mattermost server.
 
 ## Development
 
@@ -64,7 +64,7 @@ This is a webapp-only plugin with no server component.
 ### Project Structure
 
 ```
-mattermost-plugin-fake-reply/
+mattermost-plugin-link-reply/
 ├── plugin.json              # Plugin manifest
 ├── webapp/
 │   ├── src/
@@ -81,7 +81,7 @@ mattermost-plugin-fake-reply/
 1. Edit `webapp/src/index.tsx` to modify plugin behavior
 2. Run `npm run build` in the `webapp` directory to build
 3. Run `npm run debug:watch` for development with auto-rebuild
-4. Package the plugin using `tar -czf com.mattermost.plugin-fake-reply.tar.gz plugin.json webapp/dist/main.js`
+4. Package the plugin using `tar -czf com.mattermost.plugin-link-reply.tar.gz plugin.json webapp/dist/main.js`
 
 ### Key Implementation Details
 
